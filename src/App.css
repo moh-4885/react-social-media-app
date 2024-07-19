@@ -1,0 +1,196 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  height: 80px;
+  background-color: #fef7e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* width: 100%; */
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .logo img {
+  width: 140px;
+  height: 90px;
+}
+.container ul {
+  display: flex;
+  list-style: none;
+}
+.container ul li a {
+  text-decoration: none;
+  color: black;
+}
+.container ul .active {
+  color: #574c4c;
+  font-weight: 500;
+  position: relative;
+}
+.container ul .active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #574c4c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.container ul li:not(:last-child) {
+  margin-right: 40px;
+}
+.btn {
+  background-color: white;
+  border-color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  background-color: #333;
+  color: white;
+}
+.user {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -10%;
+}
+.user p {
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.user img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.btnout {
+  color: red;
+}
+.btnout:hover {
+  color: white;
+  background-color: red;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.createPostContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+form > * {
+  margin-bottom: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+form input[type="submit"] {
+  background-color: #332f2f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: aliceblue;
+}
+.post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: #f3f1f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+.postHeader {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+.postHeader img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.postHeader h2 {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.postbody h2 {
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: start;
+  font-size: 20px;
+  font-weight: bold;
+}
+.postbody p {
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: start;
+  font-size: 15px;
+}
+.postbody img {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.reaction {
+  display: flex;
+  width: 100%;
+  padding: 0;
+}
+.reaction button {
+  width: 50%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reaction button > * {
+  margin-right: 10px;
+}
+
+.reaction button:focus {
+  border-right: none;
+  border-left: none;
+  outline: none;
+}
+.liked {
+  color: rgb(65, 65, 250);
+}
